@@ -105,7 +105,7 @@ lmdeploy serve gradio http://localhost:23333 \
     --server-name 0.0.0.0 \
     --server-port 6006
 
-# 使用LMDeploy运行视觉多模态大模型llava
+# 使用LMDeploy运行视觉多模态大模型llava（需要24G显存。。。未做）
 安装llava依赖库。
 pip install git+https://github.com/haotian-liu/LLaVA.git@4e2277a060da264c4f21b364c867cc622c945874
 
