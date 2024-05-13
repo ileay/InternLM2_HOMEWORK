@@ -1,10 +1,10 @@
 # 构建环境lmdeploy
 studio-conda -t lmdeploy -o pytorch-2.1.2
 
-进入环境lmdeploy
+#进入环境lmdeploy
 conda activate lmdeploy
 
-安装版本lmdeploy
+#安装版本lmdeploy
 pip install lmdeploy[all]==0.3.0
 
 InternStudio开发机上下载模型
