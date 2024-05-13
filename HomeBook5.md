@@ -62,6 +62,7 @@ python /root/pipeline_transformer.py
 使用LMDeploy与模型对话
 conda activate lmdeploy
 
+LMDeploy模型量化(lite)
 运行下载的1.8B模型
 lmdeploy chat /root/internlm2-chat-1_8b
 
