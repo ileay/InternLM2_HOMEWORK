@@ -67,4 +67,21 @@ LMDeploy模型量化(lite)
 运行下载的1.8B模型
 lmdeploy chat /root/internlm2-chat-1_8b
 
+使用W4A16量化
+安装一个依赖库
+pip install einops==0.7.0
+
+仅需执行一条命令，就可以完成模型量化工作。
+
+lmdeploy lite auto_awq \
+   /root/internlm2-chat-1_8b \
+  --calib-dataset 'ptb' \
+  --calib-samples 128 \
+  --calib-seqlen 1024 \
+  --w-bits 4 \
+  --w-group-size 128 \
+  --work-dir /root/internlm2-chat-1_8b-4bit
+
+  W4A16，将KV Cache比例再次调为0.4
+  lmdeploy chat /root/internlm2-chat-1_8b-4bit --model-format awq --cache-max-entry-count 0.4
 
