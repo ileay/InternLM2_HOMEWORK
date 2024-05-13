@@ -32,12 +32,13 @@ mv /root/internlm2-chat-1.8b /root/internlm2-chat-1_8b
 touch /root/pipeline_transformer.py
 
 将以下内容复制粘贴进入pipeline_transformer.py。
+
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("/root/internlm2-chat-1_8b", trust_remote_code=True)
 
-# Set `torch_dtype=torch.float16` to load model in float16, otherwise it will be loaded as float32 and cause OOM Error.
+Set `torch_dtype=torch.float16` to load model in float16, otherwise it will be loaded as float32 and cause OOM Error.
 model = AutoModelForCausalLM.from_pretrained("/root/internlm2-chat-1_8b", torch_dtype=torch.float16, trust_remote_code=True).cuda()
 model = model.eval()
 
