@@ -32,3 +32,7 @@ cd /root/agent
 
 git clone -b camp2 https://gitee.com/internlm/Tutorial.git
 
+安装streamlit
+
+pip install streamlit==1.24.0
+
